@@ -14,7 +14,7 @@ COPY run_benchmark.py .
 RUN pip install --no-cache-dir psutil numpy
 
 # Compilar la librería compartida
-RUN gcc -fPIC -shared -o shared_code.so shared_code.c
+RUN gcc -fPIC -shared -o shared_code.so shared_code.c   
 
 # Crear punto de montaje para resultados compartidos
 RUN mkdir -p /mnt/shared_results
