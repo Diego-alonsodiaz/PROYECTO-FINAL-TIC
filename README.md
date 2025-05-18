@@ -97,6 +97,44 @@ pip install jupyter pandas matplotlib psutil
 
 ---
 
+## 🔍 ¿En qué consisten las pruebas de rendimiento?
+
+Este proyecto evalúa comparativamente cómo se comportan las **máquinas virtuales (VM)** y los **contenedores Docker** al ejecutar tareas computacionalmente intensivas. Las pruebas realizadas miden:
+
+- 🔧 **Uso de CPU**  
+- 🧠 **Uso de Memoria RAM**  
+- ⏱️ **Tiempo de ejecución de tareas multihilo**
+
+Para esto, se ejecutan programas en C que realizan cálculos pesados durante un tiempo determinado, simulando escenarios reales donde el procesamiento es crítico.
+
+---
+
+## 🧵 ¿Qué son los hilos y por qué se usan?
+
+Las pruebas se ejecutan con distintas cantidades de **hilos (threads)**: 1, 2, 4, 6 y 8. Un hilo representa una línea de ejecución paralela, y su uso permite:
+
+- Aprovechar **múltiples núcleos de CPU**.
+- Ejecutar tareas más rápido gracias al **paralelismo**.
+- Medir cómo **escala el entorno** cuando aumentamos la carga.
+
+| Nº de Hilos | Significado |
+|-------------|-------------|
+| 1 hilo      | Ejecución secuencial (una sola tarea). |
+| 2 hilos     | Ejecución paralela en dos núcleos. |
+| 4-8 hilos   | Tareas distribuidas en varios núcleos disponibles. |
+
+Esto es especialmente relevante para evaluar **el rendimiento en sistemas multihilo**, algo común en servidores, análisis de datos, simulaciones científicas, etc.
+
+---
+
+## 📈 Visualización del Rendimiento
+
+A continuación se muestran gráficos que comparan el uso de CPU y RAM durante las pruebas en función del número de hilos. Estas gráficas permiten observar:
+
+- Cómo escala cada entorno (Docker vs VM) al aumentar la carga.
+- Qué entorno gestiona mejor el paralelismo.
+- El impacto en el consumo de recursos.
+
 ## 📊 Análisis de Resultados
 
 A continuación se muestran los gráficos generados durante las pruebas de benchmark, midiendo el uso de CPU y memoria con diferentes cantidades de hilos:
