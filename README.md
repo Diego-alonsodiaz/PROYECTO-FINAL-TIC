@@ -89,7 +89,7 @@ pip install jupyter pandas matplotlib psutil
 
 | Elemento         | Detalle                                 |
 |------------------|------------------------------------------|
-| Plataforma host  | Ubuntu 22.04                            |
+| Plataforma host  | Windows 11                      |
 | VM               | VirtualBox con Ubuntu minimal (2 vCPU)  |
 | Contenedor       | Docker usando imagen `python:3.13`      |
 | Código benchmark | Script en C compilado, ejecutado vía Python (`run_benchmark.py`) |
