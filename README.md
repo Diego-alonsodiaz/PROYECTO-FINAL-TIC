@@ -119,7 +119,11 @@ A continuación se muestran los gráficos generados durante las pruebas de bench
 
 ## 📈 Comparativa y Análisis (Notebooks)
 
-En los notebooks ![comparar_resultados.ipynb](vm_vs_docker_benchmark/notebooks/comparar_resultados.ipynb) y ![vm_vs_docker.ipynb](vm_vs_docker_benchmark/notebooks/vm_vs_docker.ipynb) se incluye:
+ ![comparar_resultados.ipynb](vm_vs_docker_benchmark/notebooks/comparar_resultados.ipynb) 
+
+ ---
+ 
+ ![vm_vs_docker.ipynb](vm_vs_docker_benchmark/notebooks/vm_vs_docker.ipynb) 
 
 - Gráficos comparativos del rendimiento entre VM y Docker.
 - Evaluación visual de escalabilidad por hilos.
